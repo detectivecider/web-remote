@@ -8,10 +8,13 @@ def root():
 @route('/css/bulma.css')
 def bulma():
     return static_file('bulma.css', root='css')
+@route('/css/sheet.css')
+def sheet():
+    return static_file('sheet.css', root='css')
 
-@route('/remote-control.png')
+@route('/assets/remote-control.png')
 def favi():
-    return static_file('remote-control.png', root='.')
+    return static_file('remote-control.png', root='assets')
 
 @route('/upload', method='POST')
 def do_upload():
