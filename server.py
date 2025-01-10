@@ -1,4 +1,5 @@
 import os
+import requests
 from bottle import route, request, static_file, run, redirect
 
 @route('/')
@@ -31,10 +32,13 @@ def do_upload():
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
 
     if os.path.exists(file_path):
-        redirect('http://192.168.1.19:8080/open-pdf?file={file_path}'.format(file_path=file_path))
+        requests.get('http://192.168.1.19:8080/open-pdf?file={file_path}'.format(file_path=file_path))
+        redirect('http://192.168.1.19:9999')
     else:
         upload.save(file_path)
-        redirect('http://192.168.1.19:8080/open-pdf?file={file_path}'.format(file_path=file_path))
+        requests.get('http://192.168.1.19:8080/open-pdf?file={file_path}'.format(file_path=file_path))
+        redirect('http://192.168.1.19:9999')
+
 
 if __name__ == '__main__':
     run(host='0.0.0.0', port=9999)

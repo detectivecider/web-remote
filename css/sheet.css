@@ -15,7 +15,6 @@ html,body {
 }
 
 #first {
-    border: 1px solid black;
     border-radius: 5px;
     width: 100%;
     height: 90vh;
@@ -34,28 +33,33 @@ html,body {
 
 .small_btn {
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
 .button.is-dark {
     width: 100%;
-    height: 50px;
+    height: 70px;
+}
+
+.button.is-white {
+    width: 100%;
+    height: 70px;
 }
 
 .button.is-danger {
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
 .button.is-info {
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
  .button.is-success {
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
  .button.is-warning {
     width: 100%;
-    height: 50px;
+    height: 70px;
 }
 
 .grid-container {
@@ -63,6 +67,7 @@ html,body {
     grid-template-areas: "button1 button2 button3"
 "button4 button5 button6"
 "button7 button8 button9"
+"button11 button12 button13"
 "button10 button10 button10";
     text-align: center;
     grid-gap: 5px;
@@ -103,6 +108,19 @@ html,body {
 .grid-item:nth-child(9) {
     grid-area: button9;
 }
+
 .grid-item:nth-child(10) {
     grid-area: button10;
+}
+
+.grid-item:nth-child(11) {
+    grid-area: button11;
+}
+
+.grid-item:nth-child(12) {
+    grid-area: button12;
+}
+
+.grid-item:nth-child(13) {
+    grid-area: button13;
 }
